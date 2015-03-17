@@ -15,6 +15,7 @@ RUN apt-get update -q
 # base dependencies
 #
 RUN apt-get install -yq \
+    curl \
     python-dev \
     python-pip \
     pkg-config \
@@ -29,9 +30,12 @@ RUN apt-get install -yq \
     python-nose \
     libopencv-dev
 
+#
+# moviepy, and more dependencies
+# ISSUE: scikit-image fails to install; it's omitted for now.
+#
 RUN pip install \
     ez_setup \
     Pillow \
-    scikit-image \
     matplotlib \
     moviepy
