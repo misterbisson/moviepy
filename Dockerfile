@@ -32,10 +32,14 @@ RUN apt-get install -yq \
 
 #
 # moviepy, and more dependencies
-# ISSUE: scikit-image fails to install; it's omitted for now.
 #
 RUN pip install \
+    setuptools \
     ez_setup \
-    Pillow \
+    pillow \
     matplotlib \
+    networkx \
+    scikit-image \
+    imageio \
+    youtube-dl \
     moviepy
